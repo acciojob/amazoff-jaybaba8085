@@ -37,7 +37,7 @@ public class Repository {
     }
     public int getOrderCountByPartnerId(String id)
     {
-//        DeliveryPartner patner= deliveryPartnerHashMap.get(id);
+
         return pair.get(id).size();
     }
     public void deleteOrderById(String id)
@@ -68,7 +68,6 @@ public class Repository {
         List<String> orders=new ArrayList<>();
         for(String key: ordersHashMap.keySet())
         {
-            // Using get function we wil find a value (ArrayList)
             orders.add(ordersHashMap.get(key).getId());
         }
         return orders;
@@ -77,13 +76,11 @@ public class Repository {
     public int getCountOfUnassignedOrders()
     {
         int count=0;
-        for(String key: ordersHashMap.keySet())
-        {
-
-            // Using get function we wil find a value (ArrayList)
-            if(unassignedOrders.get(key) == 0)
-            {
-                count++;
+        if(!ordersHashMap.isEmpty()) {
+            for (String key : ordersHashMap.keySet()) {
+                if (unassignedOrders.get(key) == 0) {
+                    count++;
+                }
             }
         }
         return  count;
