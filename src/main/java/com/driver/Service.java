@@ -22,30 +22,34 @@ public class Service {
     {
         repository.addPatner(patnerid);
     }
+
     public Order getOrderById(String orderId)
     {
         return  repository.getOrderById(orderId);
     }
+
     public  DeliveryPartner getPartnerById(String id)
     {
         return repository.getPartnerById(id);
     }
+
     public int getOrderCountByPartnerId(String id)
     {
         return repository.getOrderCountByPartnerId(id);
     }
+
     public void deleteOrderById(String id)
     {
         repository.deleteOrderById(id);
     }
+
     public void deletePartnerById(String id)
     {
         repository.deletePartnerById(id);
     }
-    public void  addOrderPartnerPair(String orderid, String patnerId)
-    {
-        repository.addOrderPartnerPair(orderid,patnerId);
-    }
+
+    public void  addOrderPartnerPair(String orderid, String patnerId) {repository.addOrderPartnerPair(orderid,patnerId);}
+
     public List<String> getOrdersByPartnerId(String id)
     {
         return  repository.getOrdersByPartnerId(id);

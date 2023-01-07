@@ -2,20 +2,25 @@ package com.driver;
 
 
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 @Component
+@RestController
+@org.springframework.stereotype.Repository
 public class Repository {
 
     HashMap<String, Order> ordersHashMap=new HashMap<>();
-    //    HashMap<String,DeliveryPartner>  deliveryPartnerHashMap=new HashMap<>();
-    HashMap<String, List<String>> pair=new HashMap<>();
+
     HashMap<String, Integer> unassignedOrders=new HashMap<>();
+
+    HashMap<String, List<String>> pair=new HashMap<>();
 
     public  void addOrder(Order order)
     {
+
         ordersHashMap.put(order.getId(),order);
         unassignedOrders.put(order.getId(),0);
     }
