@@ -11,7 +11,7 @@ public class Service {
 
 
     @Autowired
-    Repository repository;
+    Repository repository=new Repository();
 
     public void addOrder(Order order)
     {
