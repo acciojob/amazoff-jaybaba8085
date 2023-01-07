@@ -1,14 +1,9 @@
 package com.driver;
 
 
-import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.RestController;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-@Component
-@RestController
 @org.springframework.stereotype.Repository
 public class Repository {
 
