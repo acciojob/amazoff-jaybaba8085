@@ -35,10 +35,10 @@ public class Repository {
         deliveryPartner.setNumberOfOrders(pair.get(Id).size());
         return  deliveryPartner;
     }
-    public int getOrderCountByPartnerId(String id)
+    public Integer getOrderCountByPartnerId(String id)
     {
 
-        return pair.get(id).size();
+        return  (Integer) pair.get(id).size();
     }
     public void deleteOrderById(String id)
     {
@@ -73,7 +73,7 @@ public class Repository {
         return orders;
     }
 
-    public int getCountOfUnassignedOrders()
+    public Integer getCountOfUnassignedOrders()
     {
         int count=0;
         if(!ordersHashMap.isEmpty()) {
@@ -83,7 +83,7 @@ public class Repository {
                 }
             }
         }
-        return  count;
+        return  (Integer) count;
     }
     public String getLastDeliveryTimeByPartnerId(String patnerId)
     {
@@ -118,7 +118,7 @@ public class Repository {
         }
         return lastDeliveryTime;
     }
-    public int getOrdersLeftAfterGivenTimeByPartnerId(String time,String patnerId)
+    public Integer getOrdersLeftAfterGivenTimeByPartnerId(String time,String patnerId)
     {
         int hour=0;
         int minute=0;
@@ -151,7 +151,7 @@ public class Repository {
 
         }
         System.out.println(count);
-        return  count;
+        return  (Integer) count;
     }
 
 

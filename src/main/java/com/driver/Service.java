@@ -33,7 +33,7 @@ public class Service {
         return repository.getPartnerById(id);
     }
 
-    public int getOrderCountByPartnerId(String id)
+    public Integer getOrderCountByPartnerId(String id)
     {
         return repository.getOrderCountByPartnerId(id);
     }
@@ -65,11 +65,11 @@ public class Service {
         return  repository.getLastDeliveryTimeByPartnerId(id);
     }
 
-    public int getOrdersLeftAfterGivenTimeByPartnerId(String time, String patnerId)
+    public Integer getOrdersLeftAfterGivenTimeByPartnerId(String time, String patnerId)
     {
         return repository.getOrdersLeftAfterGivenTimeByPartnerId(time,patnerId);
     }
-    public int getCountOfUnassignedOrders()
+    public Integer getCountOfUnassignedOrders()
     {
         return repository.getCountOfUnassignedOrders();
     }
